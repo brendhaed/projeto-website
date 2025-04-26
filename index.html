@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/desktop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <title>Innovation Class</title>
+</head>
+<body>
+  <!-- header -->
+    <header>
+        <div class="desconto">
+            <p>Ganhe <mark>$10,00</mark> de desconto no seu primeiro pedido. Utilize o cupom <span>DESCONTO10</span></p>
+        </div>
+    </header>
+
+    <!-- nav -->
+    <nav>
+        <div class="principal">
+            <div class="logo">
+              <div class="menu-toggle" id="menu-toggle">
+                <i class="bi bi-list"></i>
+              </div>
+                <img src="assets/img/logo.png" alt="Logo da loja">
+                
+                <div class="carrinho">
+                  <i class="bi bi-cart"></i>
+                  <div class="notificacao">2</div>
+              </div>
+            </div>
+            
+            <div class="search">
+              <form id="form-pesquisa" onsubmit="return Pesquisar()">
+                <div class="search-wrapper">
+                  <input type="search" id="pesquisa" name="q" class="form-control" placeholder="Digite aqui o que você procura" aria-label="Pesquisar">
+                  <button class="btn-search" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            
+            
+            <div class="lateral">
+                    <div class="cliente">
+                        <i class="bi bi-person"></i> 
+                        <span>Olá,<br>Nome Cliente</span>
+                    </div>
+
+                    <div class="carrinho-desktop">
+                      <i class="bi bi-cart"></i>
+                      <div class="notificacao">2</div>
+                    </div>
+                
+            </div>
+        </div>
+    
+    <!-- menu   -->
+    <div class="overlay" id="overlay-bg">
+        <div id="menu-container">
+            <ul class="menu menu-principal">
+                <li class="todas-categorias" data-departamento="1"><i class="bi bi-list"></i> Todas as categorias</li>
+                <li class="menu-item" data-departamento="2">Departamento</li>
+                <li class="menu-item" data-departamento="3">Departamento</li>
+                <li class="menu-item" data-departamento="4">Departamento</li>
+                <li class="menu-item" data-departamento="5">Departamento</li>
+                <li class="menu-item" data-departamento="6">Departamento</li>
+                <li class="menu-item" data-departamento="7">Departamento</li>
+                <li class="menu-item" data-departamento="8">Departamento</li>
+                <li class="menu-item" data-departamento="9">Departamento</li>
+            </ul>
+    
+        </div>
+    
+        <div id="submenu-container" class="hidden">
+            <ul id="submenu-content">
+                <li class="submenu-item" data-categoria="1">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="2">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="3">Departamento <i class="bi bi-chevron-right"></i></i></li>
+                <li class="submenu-item" data-categoria="4">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="5">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="6">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="7">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="8">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="9">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="10">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="11">Departamento <i class="bi bi-chevron-right"></i></li>
+                <li class="submenu-item" data-categoria="12">Departamento <i class="bi bi-chevron-right"></i></li>
+            </ul>
+        </div>
+    
+        <div id="submenu-categories" class="submenu-grid hidden">
+            <div class="category-content">
+                <h1 id="submenu-departamento-titulo">Departamento</h1>
+    
+                <div class="category-lists">
+                    <ul data-departamento-id="1">
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                    </ul>
+    
+                    <ul data-departamento-id="1">
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                    </ul>
+    
+                    <ul data-departamento-id="1">
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                        <li>Categoria</li>
+                    </ul>
+    
+                </div>
+            </div>
+    
+            <img src="assets/img/img-submenu.png" alt="Banner Submenu">
+        </div>
+    </div>
+</nav>
+    
+<!-- resultado da pesquisa -->
+  <div id="resultado-pesquisa" class="resultado-pesquisa"></div>
+
+    <!-- section inicio -->
+    <section class="inicio">
+        <div class="lancamentos">
+            <div class="banner-container">
+                <img src="assets/img/image 1.png" alt="imagem-principal" class="imagem-principal">
+                <img src="assets/img/Rectangle 10.png" alt="img-2" class="imagem-secundaria img-2">
+                <img src="assets/img/Grupo 4806.png" alt="img-3" class="imagem-3 img-3">
+            </div>
+        </div>
+    </section>    
+   
+     <!-- carrouseel 1 -->
+
+     <div id="carousel-modelo" class="custom-carousel-wrapper">
+      <div class="lancamentos-carroussel">
+        <h1>Lançamentos</h1>
+        <p>Ver mais</p>
+      </div>
+       <div class="custom-carousel-wrapper">
+          <button class="carousel-btn prev"><i class="bi bi-arrow-left-circle"></i></button>
+        
+          <div class="custom-carousel" id="carousel">
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="card">
+              <div class="novo-tag">NOVO</div>
+              <div class="imgs">
+                <img src="/assets/img/produto.png" class="card-img-top" alt="...">
+              </div>
+                <div class="card-body">
+                    <h3 class="card-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit </h3>
+                <div class="precos">
+                  <p class="card-preco-anterior">R$100,00</p>
+                    <a href="#" class="preco-off">10% OFF</a>
+                    <p class="card-preco-atual">R$79,90</p>
+                    <p class="text-parc">Ou em até <span>10x de R$ 7,90</span></p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+                </div>
+            </div>
+
+            
+          </div>
+          <div class="carousel-dots">
+            <span class="carousel-dot active"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+          </div>
+          
+          <button class="carousel-btn next"><i class="bi bi-arrow-right-circle"></i></button>
+        </div>
+    </div>
+    
+
+    <!-- section do meio -->
+
+    <section class="meio">
+      <div class="primeira-parte">
+        <div class="img-caneca-1">
+          <img src="assets/img/caneca-png.png" alt="">
+        </div>
+        <div class="texto-caneca-1">
+          <h1>Lorem Ipsum</h1>
+          <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut 
+            eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra 
+            magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec 
+            sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero 
+            commodo egestas efficitur id augue.</p>
+          <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut 
+            eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra 
+            magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec 
+            sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero 
+            commodo egestas efficitur id augue.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- section meio-secundario -->
+
+     <section class="meio-secundario">
+      <div class="segunda-parte">
+        <div class="texto-caneca-2">
+          <h1>Lorem Ipsum</h1>
+          <div class="item-texto">
+            <div class="icone">
+              <i class="bi bi-geo-alt"></i></i>
+            </div>
+            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </div>
+          <div class="item-texto">
+            <div class="icone">
+              <i class="bi bi-geo-alt"></i></i>
+            </div>
+            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </div>
+          <div class="item-texto">
+            <div class="icone">
+              <i class="bi bi-geo-alt"></i></i>
+            </div>
+            <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          </div>
+        </div>
+    
+        <div class="img-caneca-2">
+          <img src="assets/img/segundo banner.png" alt="Caneca">
+        </div>
+      </div>
+
+      <div class="primeira-parte"></div>
+     </section>
+
+     <!-- section do meio -->
+
+    <section class="meio">
+      <div class="primeira-parte">
+        <div class="img-caneca-1">
+          <img src="assets/img/caneca-png.png" alt="">
+        </div>
+        <div class="texto-caneca-1">
+          <h1>Lorem Ipsum</h1>
+          <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut 
+            eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra 
+            magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec 
+            sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero 
+            commodo egestas efficitur id augue.</p>
+          <p>Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut 
+            eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra 
+            magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec 
+            sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero 
+            commodo egestas efficitur id augue.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- carrouseel 2 -->
+    <div id="area-do-clone"></div>
+
+    <!-- imagem final -->
+    <div class="imagem-final">
+      <img src="assets/img/Group 7.png" alt="">
+    </div>
+    <!-- section final -->
+    <section class="final">
+        <div class="newslatter">
+            <h1>Cadastre-se na nossa <span>newslatter</span></h1>
+            <form action="">
+                <input type="text" placeholder="Digite seu nome" class="input-newslatter">
+                <input type="email" placeholder="Digite seu e-mail" class="input-newslatter">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="politica">
+                    <span class="checkmark"></span>
+                    Estou de acordo com a <a href="#">Política de Privacidade</a>
+                </label>
+                <button type="button" class="btn btn-secondary">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="conteiner1 desktop-footer">
+        <div class="logo">
+          <img src="assets/img/Grupo 10399.png" alt="">
+        </div>
+        <div class="institucional">
+          <h4>Institucional</h4>
+          <h5>Sobre Nós</h5>
+          <h5>Nossas Lojas</h5>
+          <h5>Privacidade e Segurança</h5>
+          <h5>Termos e condições</h5>
+        </div>
+        <div class="central">
+          <h4>Central de ajuda</h4>
+          <h5>Fale Conosco</h5>
+          <h5>Frete e entrega</h5>
+          <h5>Trocas e Devoluções</h5>
+          <h5>Formas de pagamento</h5>
+          <h5>FAQ</h5>
+        </div>
+        <div class="atendimento">
+          <h4>Atendimento</h4>
+          <h5>Telefone: <span>(00) 1234-5678</span></h5>
+          <h5>E-mail: <span>exemplo@exemplo.com.br</span></h5>
+          <h5>Horário de Atendimento:
+            <span>Segunda a Sábado: 07h00 às 23h00</span>
+            <span>Domingos e Feriados:  07h00 às 21h00</span>
+          </h5>
+        </div>
+      </div>
+    
+      <div class="footer-mobile">
+        <div class="accordion-item">
+          <h5 class="accordion-title">Institucional</h5>
+          <div class="accordion-content">
+            <h5>Sobre Nós</h5>
+            <h5>Nossas Lojas</h5>
+            <h5>Privacidade e Segurança</h5>
+            <h5>Termos e condições</h5>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h5 class="accordion-title">Central de ajuda</h5>
+          <div class="accordion-content">
+            <h5>Fale Conosco</h5>
+            <h5>Frete e entrega</h5>
+            <h5>Trocas e Devoluções</h5>
+            <h5>Formas de pagamento</h5>
+            <h5>FAQ</h5>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h5 class="accordion-title">Atendimento</h5>
+          <div class="accordion-content">
+            <h5>Telefone: <span>(00) 1234-5678</span></h5>
+            <h5>E-mail: <span>exemplo@exemplo.com.br</span></h5>
+            <h5>Horário de Atendimento:
+              <span>Segunda a Sábado: 07h00 às 23h00</span>
+              <span>Domingos e Feriados:  07h00 às 21h00</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class="pagamento">
+        <img src="assets/img/Grupo 10397.png" alt="">
+      </div>
+      <div class="container2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+          ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+          tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+          iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+          nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+          delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+        <img src="assets/img/Grupo 9962.png" alt="">
+      </div>
+    </footer>
+    
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/carroussel.js"></script>
+    <script src="assets/js/buscarItem.js"></script>
+    <script src="assets/js/abrirMenuToggle.js"></script>
+    <script src="assets/js/footerMobile.js"></script>
+
+</body>
+</html>
