@@ -439,8 +439,9 @@ h4 {
     font-size: 16px;
     margin-bottom: 10px;
     color: black;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
+    text-align: center;
 }
 
 h5 {
@@ -907,3 +908,4 @@ h5 {
     color: #005CFF; 
     font-weight: bold; 
 }
+
